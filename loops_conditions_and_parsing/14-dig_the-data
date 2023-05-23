@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+# f-16s best jet of it's time 
+
+# Parse the Apache log file using awk, group by IP and HTTP status code, and count occurrences
+awk '{count[$1" "$9]++} END {for (key in count) print count[key], key}' apache-access.log |
+    sort -rn |
+    awk '{print $1, $2, $3}'
