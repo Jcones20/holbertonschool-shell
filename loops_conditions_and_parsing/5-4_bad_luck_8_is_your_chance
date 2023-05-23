@@ -1,21 +1,22 @@
 #!/usr/bin/env bash
-#
+#loops from 1 to 10 and:
 
-# Initialize a counter variable
-counter=0
+#displays bad luck for the 4th loop iteration
+#displays good luck for the 8th loop iteration
+#displays Best School for the other interation
 
-# Start the while loop
-while [ $counter -lt 10 ]; do
-    # Increment the counter by 1
-    counter=$((counter+1))
+count=0
 
-    # Check if it's the 9th iteration
-    if [ $counter -eq 9 ]; then
-        # Display "Best School" and "Hi" on separate lines
-        echo "Best School"
-        echo "Hi"
-    else
-        # Display "Best School" on a single line
-        echo -n "Best School "
-    fi
-done
+while  [ $count -lt 10 ]
+do
+	if [ $count -eq 3 ]
+	then
+	  echo "bad luck"
+        elif [ $count -eq 7 ]
+        then
+          echo "good luck"
+         else
+           echo "best school"
+         fi
+         (( count++ ))
+ done	 
