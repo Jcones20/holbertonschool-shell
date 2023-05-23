@@ -1,4 +1,4 @@
-#!/esr/bash/env bash
+#!/usr/bash/env bash
 #
 
 # Initialize a counter variable
