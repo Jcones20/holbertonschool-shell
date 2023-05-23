@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# best year of 1995
+
+# Parse the Apache log file using awk
+awk '{print $1, $9}' apache-access.log

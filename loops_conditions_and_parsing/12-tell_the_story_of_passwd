@@ -1,22 +1,10 @@
 #!/usr/bin/env bash
-# Josh is the men
+#displays the content of the file /etc/passwd, using the while loop + IFS.
 
-#!/bin/bash
+while IFS=':' read username password uid info home shell; do
+  "echo", "The user $username is part of the gang,"\
+  "lives in $home and rides $shell."\
+  "$uid's place is protected by the passcode $password."\
+done < "/etc/passwd"
 
-# Read the file line by line using while loop and IFS
-
-while IFS=: read -r username _ userid groupid _ info home shell; do
-
-    # Extract user ID info from the info field
-
-    userinfo=$(echo "$info" | cut -d ',' -f 5)
-
-    # Display the story for each user
-
-    echo "The user $username is part of the $groupid gang, lives in $home, and rides $shell."
-
-    echo "User ID's place is protected by the passcode $userid, more info about the user here: $userinfo"
-
-    echo
-
-done < /etc/passwd
+done
