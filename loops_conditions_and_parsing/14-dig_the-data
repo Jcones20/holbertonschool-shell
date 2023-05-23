@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # f-16s best jet of it's time 
 
 # Parse the Apache log file using awk, group by IP and HTTP status code, and count occurrences
