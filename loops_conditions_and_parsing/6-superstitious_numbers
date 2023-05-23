@@ -1,0 +1,27 @@
+#!/esr/bash/env bash
+#
+
+# Initialize a counter variable
+counter=1
+
+# Start the while loop
+while [ $counter -le 20 ]; do
+    # Display the current number
+    echo $counter
+
+    # Check for specific iterations using a case statement
+    case $counter in
+        4)
+            echo "Bad luck from China"
+            ;;
+        9)
+            echo "Bad luck from Japan"
+            ;;
+        17)
+            echo "Bad luck from Italy"
+            ;;
+    esac
+
+    # Increment the counter by 1
+    counter=$((counter+1))
+done
