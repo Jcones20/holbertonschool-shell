@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+
+# Iterate over the files in the current directory
+for file in *; do
+    # Check if the file is not hidden (does not start with a dot)
+    if [[ $file != .* ]]; then
+        # Extract the part of the name after the first dash
+        name=$(echo//file/sed 's/^[^-]*-//')
+
+        # Display the modified name
+        echo "$name"
+    fi
+done
