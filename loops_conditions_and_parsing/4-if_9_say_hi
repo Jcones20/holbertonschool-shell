@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+#
+
+# Initialize a counter variable
+counter=0
+
+# Start the while loop
+while [ $counter -lt 10 ]; do
+    # Increment the counter by 1
+    counter=$((counter+1))
+
+    # Check if it's the 9th iteration
+    if [ $counter -eq 9 ]; then
+        # Display "Best School" and "Hi" on separate lines
+        echo "Best School"
+        echo "Hi"
+    else
+        # Display "Best School" on a single line
+        echo "Best School"
+    fi
+done
