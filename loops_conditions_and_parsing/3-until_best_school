@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+
+# Initialize a counter variable
+counter=0
+
+# Start the until loop
+until [ $counter -eq 10 ]; do
+    # Increment the counter by 1
+    counter=$((counter+1))
+
+    # Display the message
+    echo "Best School"
+done
