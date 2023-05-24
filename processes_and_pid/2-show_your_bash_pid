@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+
+# shellcheck disable=SC2009
+
+# Display lines containing "bash" and extract PID
+ps aux | grep bash | grep -v grep | awk '{print $2}'
